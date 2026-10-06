@@ -1,0 +1,314 @@
+/* ============================================================
+   Moon City
+   A Halloween theme: aubergine night, ember city-light, a grinning moon.
+   Dark is the point; light is the morning after.
+   ============================================================ */
+
+/* ── palette ───────────────────────────────────────────────── */
+.theme-dark {
+  --mc-void:        #06030d;  /* sky at the top of the frame */
+  --mc-night:       #0a0513;  /* ground */
+  --mc-bruise:      #140c22;  /* raised surfaces */
+  --mc-crypt:       #1b1030;  /* hover */
+  --mc-iron:        #3a2749;  /* dividers */
+  --mc-smoke:       #4a3358;  /* stronger dividers */
+  --mc-shade:       #6f5a80;  /* muted text */
+  --mc-mist:        #b9a4c4;  /* secondary text */
+  --mc-bone:        #ece2d8;  /* text */
+  --mc-moon:        #ffd79a;  /* the moon itself */
+  --mc-ember:       #ffa04a;  /* accent */
+  --mc-pumpkin:     #ff7a18;  /* hot accent */
+  --mc-blood:       #b01f36;
+  --mc-wound:       #e8546c;
+  --mc-witch:       #7a5cc4;
+  --mc-orchid:      #b45ccf;
+  --mc-slime:       #8fd94a;
+  --mc-ghost:       #7f9fd6;
+}
+
+.theme-light {
+  --mc-void:        #f3ece2;
+  --mc-night:       #faf5ec;  /* parchment ground */
+  --mc-bruise:      #f0e6d8;
+  --mc-crypt:       #e8dbc9;
+  --mc-iron:        #d8c7b2;
+  --mc-smoke:       #c2ad96;
+  --mc-shade:       #8a7563;
+  --mc-mist:        #6b5a4c;
+  --mc-bone:        #2a1b2e;
+  --mc-moon:        #b4702a;
+  --mc-ember:       #d4701a;
+  --mc-pumpkin:     #c25a0c;
+  --mc-blood:       #9e1a2f;
+  --mc-wound:       #c33c52;
+  --mc-witch:       #6a3fb0;
+  --mc-orchid:      #8e3bab;
+  --mc-slime:       #4e8c1c;
+  --mc-ghost:       #3c5f9c;
+}
+
+/* ── type ──────────────────────────────────────────────────── */
+body {
+  /* One face everywhere — terminal-native, like the rest of the desk. */
+  --mc-mono: 'JetBrainsMono Nerd Font Mono', 'JetBrainsMono NFM',
+             'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --font-text-theme: var(--mc-mono);
+  --font-interface-theme: var(--mc-mono);
+  --font-monospace-theme: var(--mc-mono);
+
+  --line-height-normal: 1.6;
+  --font-text-size: 15px;
+  --font-ui-small: 12px;
+
+  /* Mono runs wide and bold-heavy: smaller steps, lighter weights than a
+     proportional face would want. */
+  --h1-size: 1.65em;  --h1-weight: 700;
+  --h2-size: 1.38em;  --h2-weight: 700;
+  --h3-size: 1.18em;  --h3-weight: 600;
+  --h4-size: 1.05em;  --h4-weight: 600;
+  --h5-size: 0.95em;  --h5-weight: 600;
+  --h6-size: 0.88em;  --h6-weight: 600;
+
+  --h1-color: var(--mc-ember);
+  --h2-color: var(--mc-moon);
+  --h3-color: var(--mc-orchid);
+  --h4-color: var(--mc-mist);
+  --h5-color: var(--mc-shade);
+  --h6-color: var(--mc-shade);
+}
+
+/* ── shape ─────────────────────────────────────────────────── */
+body {
+  --radius-s: 4px;
+  --radius-m: 7px;
+  --radius-l: 11px;
+  --border-width: 1px;
+
+  --input-shadow: none;
+  --shadow-s: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-l: 0 8px 28px rgba(0, 0, 0, 0.5);
+}
+
+/* ── surfaces ──────────────────────────────────────────────── */
+body {
+  --background-primary:         var(--mc-night);
+  --background-primary-alt:     var(--mc-bruise);
+  --background-secondary:       var(--mc-void);
+  --background-secondary-alt:   var(--mc-bruise);
+  --background-modifier-border:         var(--mc-iron);
+  --background-modifier-border-hover:   var(--mc-smoke);
+  --background-modifier-border-focus:   var(--mc-ember);
+  --background-modifier-hover:          var(--mc-crypt);
+  --background-modifier-active-hover:   var(--mc-crypt);
+  --background-modifier-form-field:     var(--mc-bruise);
+  --background-modifier-error:          var(--mc-blood);
+  --background-modifier-error-hover:    var(--mc-wound);
+  --background-modifier-success:        var(--mc-slime);
+  --background-modifier-message:        var(--mc-bruise);
+
+  --divider-color: var(--mc-iron);
+  --divider-color-hover: var(--mc-ember);
+
+  --text-normal:   var(--mc-bone);
+  --text-muted:    var(--mc-mist);
+  --text-faint:    var(--mc-shade);
+  --text-accent:   var(--mc-ember);
+  --text-accent-hover: var(--mc-pumpkin);
+  --text-on-accent: var(--mc-night);
+  --text-error:    var(--mc-wound);
+  --text-success:  var(--mc-slime);
+  --text-selection: hsla(27, 100%, 64%, 0.22);
+  --text-highlight-bg: hsla(27, 100%, 64%, 0.28);
+
+  --interactive-normal:   var(--mc-bruise);
+  --interactive-hover:    var(--mc-crypt);
+  --interactive-accent:   var(--mc-ember);
+  --interactive-accent-hover: var(--mc-pumpkin);
+  --color-accent:         var(--mc-ember);
+  --color-accent-1:       var(--mc-pumpkin);
+  --color-accent-2:       var(--mc-moon);
+
+  --caret-color: var(--mc-ember);
+  --link-color: var(--mc-ember);
+  --link-color-hover: var(--mc-pumpkin);
+  --link-unresolved-color: var(--mc-blood);
+  --link-unresolved-opacity: 0.7;
+  --link-external-color: var(--mc-orchid);
+  --link-external-color-hover: var(--mc-ember);
+  --link-decoration: none;
+  --link-decoration-hover: underline;
+
+  --tag-color: var(--mc-orchid);
+  --tag-background: hsla(287, 57%, 58%, 0.12);
+  --tag-background-hover: hsla(287, 57%, 58%, 0.22);
+  --tag-radius: 999px;
+
+  --blockquote-border-color: var(--mc-ember);
+  --blockquote-color: var(--mc-mist);
+  --hr-color: var(--mc-iron);
+
+  --code-normal: var(--mc-moon);
+  --code-background: var(--mc-bruise);
+  --code-size: 0.9em;
+
+  --checkbox-color: var(--mc-ember);
+  --checkbox-color-hover: var(--mc-pumpkin);
+  --checkbox-border-color: var(--mc-smoke);
+  --checkbox-marker-color: var(--mc-night);
+
+  --scrollbar-thumb-bg: hsla(287, 20%, 45%, 0.35);
+  --scrollbar-active-thumb-bg: var(--mc-ember);
+  --scrollbar-bg: transparent;
+
+  --titlebar-background: var(--mc-void);
+  --titlebar-background-focused: var(--mc-void);
+  --titlebar-text-color-focused: var(--mc-bone);
+
+  --tab-text-color-focused-active-current: var(--mc-bone);
+  --tab-outline-color: var(--mc-iron);
+  --tab-radius-active: var(--radius-m);
+
+  --nav-item-color-active: var(--mc-ember);
+  --nav-item-background-active: var(--mc-crypt);
+  --nav-indentation-guide-color: var(--mc-iron);
+
+  --prompt-border-color: var(--mc-smoke);
+  --modal-border-color: var(--mc-smoke);
+
+  --table-header-background: var(--mc-bruise);
+  --table-row-alt-background: hsla(265, 45%, 12%, 0.45);
+  --table-row-background-hover: var(--mc-crypt);
+  --table-border-color: var(--mc-iron);
+
+  --embed-border-left: 2px solid var(--mc-ember);
+
+  --graph-line: var(--mc-iron);
+  --graph-node: var(--mc-mist);
+  --graph-node-focused: var(--mc-ember);
+  --graph-node-tag: var(--mc-orchid);
+  --graph-node-attachment: var(--mc-ghost);
+  --graph-node-unresolved: var(--mc-blood);
+
+  --icon-color-focused: var(--mc-ember);
+  --icon-opacity: 0.72;
+  --icon-opacity-hover: 1;
+
+  --indentation-guide-color: hsla(287, 20%, 50%, 0.18);
+  --indentation-guide-color-active: var(--mc-ember);
+
+  --canvas-color: 265, 45%, 60%;
+  --canvas-dot-pattern: var(--mc-iron);
+}
+
+/* ── syntax: city lights on a black river ──────────────────── */
+body {
+  --code-comment:   var(--mc-shade);
+  --code-function:  var(--mc-ember);
+  --code-important: var(--mc-wound);
+  --code-keyword:   var(--mc-orchid);
+  --code-operator:  var(--mc-ghost);
+  --code-property:  var(--mc-moon);
+  --code-punctuation: var(--mc-mist);
+  --code-string:    var(--mc-slime);
+  --code-tag:       var(--mc-witch);
+  --code-value:     var(--mc-pumpkin);
+}
+
+/* ── the moonlit glow on the active window ─────────────────── */
+/* Matches the ember border on the focused window in the rest of the rice. */
+.theme-dark .workspace-leaf.mod-active .view-content,
+.theme-dark .workspace-leaf.mod-active .workspace-leaf-content {
+  box-shadow: inset 0 1px 0 0 hsla(27, 100%, 64%, 0.14);
+}
+
+/* Headings get a thin ember rule, like the hairline under the status bar. */
+.markdown-preview-view h1,
+.markdown-source-view.mod-cm6 .HyperMD-header-1,
+.markdown-rendered h1 {
+  border-bottom: 1px solid var(--mc-iron);
+  padding-bottom: 0.25em;
+}
+
+/* Mono headings sit tighter than the default tracking wants. */
+.markdown-rendered :is(h1, h2, h3, h4, h5, h6),
+.cm-s-obsidian :is(.HyperMD-header, .cm-header) {
+  letter-spacing: -0.02em;
+}
+
+/* Blockquotes read as lamplight spill. */
+.markdown-rendered blockquote,
+.markdown-source-view.mod-cm6 .cm-blockquote {
+  background: linear-gradient(
+    to right,
+    hsla(27, 100%, 64%, 0.07),
+    transparent 55%
+  );
+  padding-left: 1em;
+}
+
+/* Inline code: a lit window. */
+.markdown-rendered code:not(pre code) {
+  border: 1px solid var(--mc-iron);
+  padding: 0.1em 0.35em;
+}
+
+/* Code blocks sit a shade deeper than the page, like water under the city. */
+.markdown-rendered pre,
+.cm-s-obsidian .HyperMD-codeblock {
+  border: 1px solid var(--mc-iron);
+}
+
+/* Checkboxes: a small ember when done. */
+input[type='checkbox']:checked {
+  box-shadow: 0 0 0 1px hsla(27, 100%, 64%, 0.4),
+              0 0 10px -2px var(--mc-ember);
+}
+
+/* Active tab keeps the ember underline instead of a heavy fill. */
+.workspace-tab-header.is-active::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 2px;
+  height: 1.5px;
+  background: var(--mc-ember);
+  border-radius: 2px;
+}
+
+/* Status bar + ribbon: the hairline chrome from sketchybar. */
+.status-bar {
+  border-top: 1px solid var(--mc-iron);
+  background: var(--mc-void);
+}
+.workspace-ribbon {
+  border-color: var(--mc-iron);
+}
+
+/* Selected / hovered file in the explorer gets an ember spine. */
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  box-shadow: inset 2px 0 0 0 var(--mc-ember);
+}
+
+/* Callouts inherit the accent family rather than Obsidian's stock blues. */
+.callout[data-callout='warning'],
+.callout[data-callout='caution'],
+.callout[data-callout='attention'] { --callout-color: 255, 160, 74; }
+.callout[data-callout='danger'],
+.callout[data-callout='error'],
+.callout[data-callout='bug'] { --callout-color: 232, 84, 108; }
+.callout[data-callout='note'],
+.callout[data-callout='info'],
+.callout[data-callout='abstract'] { --callout-color: 180, 92, 207; }
+.callout[data-callout='tip'],
+.callout[data-callout='hint'],
+.callout[data-callout='success'],
+.callout[data-callout='done'] { --callout-color: 143, 217, 74; }
+.callout[data-callout='quote'],
+.callout[data-callout='cite'],
+.callout[data-callout='example'] { --callout-color: 127, 159, 214; }
+
+/* ── optional: a moon over the empty tab ───────────────────── */
+/* Enable with a snippet or Style Settings if you want it; off by default. */

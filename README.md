@@ -14,6 +14,7 @@ over the river. Dark mode is the point — light mode is the morning after.
 | accent (ember) | `#ffa04a` | `#d4701a` |
 | moon | `#ffd79a` | `#b4702a` |
 | orchid | `#b45ccf` | `#8e3bab` |
+| bold | `#ffd79a` | `#b4702a` |
 | blood | `#b01f36` | `#9e1a2f` |
 
 Headings run ember → moon → orchid. Links, checkboxes, the active tab underline

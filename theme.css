@@ -76,6 +76,12 @@ body {
   --h4-color: var(--mc-mist);
   --h5-color: var(--mc-shade);
   --h6-color: var(--mc-shade);
+
+  /* Bold goes gold — warmer than body text, and distinct from the ember
+     that links and the active tab already own. */
+  --bold-color: var(--mc-moon);
+  --bold-weight: 700;
+  --italic-color: var(--mc-mist);
 }
 
 /* ── shape ─────────────────────────────────────────────────── */
